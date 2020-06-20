@@ -5,7 +5,6 @@ import "./styles.css";
 
 function App() {
   const [repositories, setRepositories] = useState([]);
-  const [repository, setRepository] = useState({ title: "" });
 
   useEffect(() => {
     api.get("/repositories").then((response) => {
@@ -14,16 +13,23 @@ function App() {
   }, []);
 
   async function handleAddRepository() {
-    if (repository.title.length < 1) return;
-
-    api.post("/repositories", repository).then((response) => {
-      setRepositories([...repositories, response.data]);
-      setRepository({ title: "" });
-    });
+    api
+      .post("/repositories", {
+        title: `New repository ${Date.now()}`,
+      })
+      .then((response) => {
+        setRepositories([...repositories, response.data]);
+      });
   }
 
   async function handleRemoveRepository(id) {
-    // TODO
+    api.delete(`/repositories/${id}`).then(() => {
+      const repositoriesFiltered = repositories.filter(
+        (item) => item.id !== id
+      );
+
+      setRepositories(repositoriesFiltered);
+    });
   }
 
   return (
@@ -32,19 +38,13 @@ function App() {
         {repositories.map((repository) => (
           <li key={repository.id}>
             {repository.title}
-            <button onClick={() => handleRemoveRepository(1)}>Remover</button>
+            <button onClick={() => handleRemoveRepository(repository.id)}>
+              Remover
+            </button>
           </li>
         ))}
       </ul>
 
-      <input
-        onChange={(e) =>
-          setRepository({ ...repository, title: e.target.value })
-        }
-        value={repository.title}
-        autoFocus
-        type="text"
-      />
       <button onClick={handleAddRepository}>Adicionar</button>
     </div>
   );
