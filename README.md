@@ -5,8 +5,12 @@
 </h1>
 
 <div align="center">
- "Ao infinito e além :rocket:"
+ "Ao infinito e além 🚀"
 </div>
+
+&nbsp;
+
+![App Preview](https://i.imgur.com/VMU28JY.gif)
 
 ## Sobre 🤓
 
@@ -15,9 +19,12 @@ Está aplicação é um desafio lançado no curso de conceitos básicos em React
 ## Funcionamento 🚀💣
 
 - Temos uma listagem de todos os repositórios da nossa API.
+
+  **GET**: http://localhost:3333/repositories
+
 - Temos um botão **Adicionar** que adiciona um registro aleatório.
 
-  Rota: **POST**: http://localhost:3333/repositories
+  **POST**: http://localhost:3333/repositories
 
   ```json
   {
@@ -27,15 +34,15 @@ Está aplicação é um desafio lançado no curso de conceitos básicos em React
 
 - Temos um botão **Remover** que remove um determinado registro.
 
-  Rota: **DELETE**: http://localhost:3333/repositories/:id
+  **DELETE**: http://localhost:3333/repositories/:id
 
 ## Como posso usar sua API 🔧🆙 ?
 
 ### Requisitos:
 
-- [ ][nodejs](https://nodejs.org/en/)
-- [ ][yarn](https://yarnpkg.com/)
-- [ ][api em nodejs](https://github.com/brunoJSX/node-concepts-challenge), acesse o github para ter os passos de como configurar.
+- [nodejs](https://nodejs.org/en/)
+- [yarn](https://yarnpkg.com/)
+- [API em nodejs](https://github.com/brunoJSX/node-concepts-challenge), acesse o github para ter os passos de como configurar.
 
 &nbsp;
 
@@ -46,7 +53,7 @@ Está aplicação é um desafio lançado no curso de conceitos básicos em React
 No seu terminal faça um clone do projeto
 
 ```bash
-git clone https://github.com/brunoJSX/node-concepts-challenge
+git clone https://github.com/brunoJSX/reactjs-concepts-challenge
 ```
 
 Entre na pasta e dê o comando
@@ -58,31 +65,8 @@ yarn
 Em seguida basta rodar o comando
 
 ```bash
-yarn dev
+yarn start
 ```
-
-E caso tenha um retorno igual a esse:
-
-![https://imgur.com/dotS1tY](https://i.imgur.com/dotS1tY.png)
-
-&nbsp;
-
-**PRONTO** !!! 🚀💥 A API já está funcionando!!!
-
-&nbsp;
-
-Podemos as rotas usando o Insomnia, ou a ferramente que você escolheu, para fazer os teste, olha um print do meu Insomnia 😻.
-
-- Criando um repositório:
-
-![Insomnia print](https://i.imgur.com/6Zgzq6o.png)
-
-- Buscando os repositórios:
-
-![Insomnia print](https://i.imgur.com/RE1dzhS.png)
-
-&nbsp;
-O restante vou deixar por sua curiosidade kkkkk 😝
 
 &nbsp;
 
