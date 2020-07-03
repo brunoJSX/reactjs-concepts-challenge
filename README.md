@@ -14,7 +14,7 @@
 
 ## Sobre 🤓
 
-Está aplicação é um desafio lançado no curso de conceitos básicos em ReactJS, aplicado no GoStack 12 da Rockeseat. Basicamente temos um CRUD de repositórios que usa uma API (link: https://github.com/brunoJSX/node-concepts-challenge) que fiz em NodeJS.
+Esta aplicação é um desafio lançado no curso de conceitos básicos em ReactJS, aplicado no GoStack 12 da Rockeseat. Basicamente temos um CRUD de repositórios que usa uma API (link: https://github.com/brunoJSX/node-concepts-challenge) que fiz em NodeJS.
 
 ## Funcionamento 🚀💣
 
